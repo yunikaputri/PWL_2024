@@ -80,3 +80,15 @@ Route::resource('photos', PhotoController::class)->only([
 Route::resource('photos', PhotoController::class)->except([ 
     'create', 'store', 'update', 'destroy' 
 ]); 
+
+//PRAKTIKUM 3
+// Route::get('/greeting', function () { 
+//     return view('hello', ['name' => 'yunika']); 
+// }); 
+
+// Route::get('/greeting', function () { 
+//     return view('blog.hello', ['name' => 'yunika']); 
+// }); 
+
+Route::get('/greeting', [WelcomeController::class, 
+'greeting']);
